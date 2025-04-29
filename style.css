@@ -1,19 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
-    /* background-color: black; */
-    color: white;
+color: white;
 }
+
 .container{
+    /* margin: 10px; */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2px ;
-    
+    /* flex-direction:row; */
 }
-.left{
-    border: 2px solid red;
+.home ul li{
+    display: flex;
+    gap: 15px;
+ width: 24px;
+
+}
+
+.left{ 
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    /* border: 2px solid blue; */
     width: 25vw;
 }
 .right{
-    border: 2px solid red;
     width: 75vw;
 }
