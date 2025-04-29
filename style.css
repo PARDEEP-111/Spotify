@@ -1,0 +1,19 @@
+body{
+    /* background-color: black; */
+    color: white;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px ;
+    
+}
+.left{
+    border: 2px solid red;
+    width: 25vw;
+}
+.right{
+    border: 2px solid red;
+    width: 75vw;
+}
