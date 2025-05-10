@@ -23,3 +23,6 @@
 .m-1{
     margin: 5px;
 }
+.flex{
+    display: flex;
+}
