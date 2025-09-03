@@ -4,35 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <div class="container bg-black">
+    <header>
         <div class="left">
-            <div class="home flex bg-grey m-1">
-                <div class="logo"><img class="invert" src="assets/logo.svg" alt=""></div>
+            <a href="#"><img class="logo icon" src="assets/logo.svg" alt=""></a>
+            <a href="#"><img class="home icon" src="assets/home.svg" alt=""></a>
+            <div id="search-box">
+                 <a href="#"><img class="search icon" src="assets/search.svg" alt=""></a>
+                <input class="search-bar" type="search">
+            </div>
 
-                <img class="invert home-svg  icon" src="assets/home.svg" alt="">
-                <div class="search-box">
-                    <img class="invert  search-svg icon" src="assets/search.svg" alt="">
-                    <input type="search" placeholder="What do you want to play?" name="search" id="search">
-                </div>
-            </div>
-            <div class="library bg-grey ">
-                <div class="heading">
-                    <h4>
-                        your library
-                    </h4>
-                    <button class="add-play-list">+</button>
-                </div>
-            </div>
         </div>
-        <div class="right ">i am right</div>
-    </div>
-    <script src="script.js"></script>
+        <div class="right"> i am right</div>
+    </header>
+    <aside>
+        <div class="your-library-main-container">
+            <div class="your-library-sub-container">
+                <div class="your-library">Your library</div>
+                <button>add</button>
+            </div>
+            <div class="card-1 card ">creat your first play list</div>
+            <div class="card-2 card ">lets find some podcarts</div>
+            <footer>
+                <div class="">
+                    i am footer
+                </div>
+            </footer>
+        </div>
+    </aside>
+    <main>
+        <div class="tags-row"></div>
+        <div class="albums-container  main-container ">
+            <div class="albums"></div>
+        </div>
+        <div class="artist-container main-container ">
+            <div class="artist"></div>
+        </div>
+    </main>
 </body>
 
 </html>
