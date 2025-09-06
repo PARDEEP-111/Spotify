@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
 }
 body{
     display: grid;
+    background-color: black;
     grid-template-columns: 25vw 75vw;
     grid-template-rows:64px 91.8vh ;
 }
@@ -85,6 +87,7 @@ footer{
 }
 .icon{
     width: 30px;
+    cursor: pointer;
 
 }
 #search-box{
@@ -96,4 +99,8 @@ footer{
 }
 .search-bar{
     width: 22vw;
+    background-color: black;
+}
+.invert{
+    filter: invert(10px);
 }
