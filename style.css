@@ -3,13 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    /* color: white; */
+    color: white;
 }
 body{
     display: grid;
     /* background-color: black; */
     grid-template-columns: 25vw 75vw;
     grid-template-rows:64px 91.8vh ;
+    color: white;
+    background-color: black;
 }
 header{
     display: flex;
@@ -18,6 +20,8 @@ header{
     grid-row: 0/3;
     width: 100vw;
     height: 64px;
+    background-color: black;
+    color: white;
     /* border:2px solid  ; */
    
 }
@@ -42,6 +46,7 @@ main{
     display: flex;
 /* border: 2px solid red; */
 height: 30px;
+color: white;
 }
 .right{
     display: flex;
@@ -52,6 +57,13 @@ height: 30px;
     display: flex;
     justify-content: space-between;
     
+}
+.add-btn{
+    border: none;
+    background-color: black;
+    color: #929292;
+    font-size: 29px;
+    padding-right: 20px;
 }
 .your-library-main-container{
     display: flex;
@@ -65,8 +77,36 @@ height: 30px;
     height: 30%;
     width: 95%;
     border: 2px solid black;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 10px;
     margin-left: 10px;
+    line-height: 2;
+    padding: 10px;
 }
+.card-first-line{
+    font-size: large;
+}
+.card-second-line{
+    font-size: 14px;
+    color: rgb(240, 239, 239);
+}
+.card-third-line{
+    cursor: pointer;
+    border-radius: 50px;
+    height: 30px;
+    margin-top: 10px;
+    width: 120px;
+    background-color: white;
+    border: none;
+    color: black;
+
+}
+
 .tags-row{
     height: 30px;
     width: 100%;
@@ -83,8 +123,11 @@ footer{
 
 .main-container{
      width: 100%;
-    height:30%;
+    height:50%;
     border: 5px solid grey;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 10px;
 }
 .icon{
     border-radius: 100%;
@@ -126,39 +169,60 @@ footer{
 .install-icon{
     height: 18px;
 }
+
 .support-item{
     text-decoration: none;
-    color: #444444;
-    cursor: pointer;
-    font-size: 18px;
+    color: #929292;
+    font-size: 14px;
     padding: 5px;
 }
-.support-item:hover{
-    color: white ;
-}
-.support-box{
-    border-right: 1px solid black
-    ;
-}
+
 .login-box{
     display: flex;
     padding-left: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 .log-in{
-    /* border: 2px solid black; */
     display: flex;
+    font-size: 16px;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
-    color: black;
-    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-weight:bolder;
     background-color: white;
-    width: 80px;
-    height: 40px;
-    cursor: pointer;
+    width: 110px;
+    height: 50px;
 }
-.log-in:hover{
-    background-color: aliceblue;
-    border:#121212;
+.playlist-card-container{
+    padding: 20px;;
+}
+.playlist-card{
+    height: 269.5px;
+    width: 195.5px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: self-start;
+    /* padding: 10px; */
+    margin: 10px;
+
+}
+.playlist-img{
+    height: 160px;
+    width: 190px;
+    border-radius: 3px;
+}
+
+.playlist-heading{
+    font-size: 16px;
+    padding: 5px;
+}
+.playlist-paragraph{
+    font-size: 14px;
+    color: #929292;
+    padding: 5px;
 }
