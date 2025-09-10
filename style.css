@@ -67,51 +67,14 @@ height: 30px;
 }
 .your-library-main-container{
     display: flex;
+    margin-top: 30px;
     flex-direction: column;
     /* align-items: center; */
     /* justify-content: center; */
     gap: 20px;
     height: 100%;
 }
-.card{
-    height: 30%;
-    width: 95%;
-    border: 2px solid black;
-    background-color: #1a1a1a;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    border-radius: 10px;
-    margin-left: 10px;
-    line-height: 2;
-    padding: 10px;
-}
-.card-first-line{
-    font-size: large;
-}
-.card-second-line{
-    font-size: 14px;
-    color: rgb(240, 239, 239);
-}
-.card-third-line{
-    cursor: pointer;
-    border-radius: 50px;
-    height: 30px;
-    margin-top: 10px;
-    width: 120px;
-    background-color: white;
-    border: none;
-    color: black;
 
-}
-
-.tags-row{
-    height: 30px;
-    width: 100%;
-    border: 3px solid green;
-}
 footer{
     display: flex;
     justify-content: center;
