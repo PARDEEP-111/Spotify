@@ -24,7 +24,7 @@ return songs;
    for (const songs of song) {
     songul.innerHTML = songul.innerHTML+`<li>
 
-                            <img src="assets/music_note_40dp_DCEAD5_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                            <img class="music-icon" src="assets/music_note_40dp_DCEAD5_FILL0_wght400_GRAD0_opsz40.png" alt="">
                         <div class="info">
                             <div class="song-name">${songs.replaceAll("%20", " ")}</div>
                             <div class="artist">Pardeep</div>

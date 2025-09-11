@@ -111,7 +111,7 @@ border-radius:5px ;
     height: 25px;
 }
 .main-container{
-     width: 100%;
+     width: 90%;
     height:50%;
     margin-left: 60px;
     background-color:#121212;
@@ -124,6 +124,15 @@ border-radius:5px ;
     width: 40px;
     cursor: pointer;
 
+}
+.music-icon{
+    height: 30px;
+    width: 70px;
+    object-fit: contain;
+}
+.info{
+   
+    font-size: 12px;
 }
 #search-box{
     display: flex;
@@ -198,9 +207,19 @@ border-radius:5px ;
 .playlist-card{
     height: 269.5px;
     width: 195.5px;
-    background-color: #1a1a1a;
+    background-color:#0d0d0d;
     position: relative;
+    border-radius: 10px;
+    border: 1px solid rgb(71, 71, 71);
 
+}
+.your-library-song-container{
+    /* border: 2px solid red; */
+    overflow: auto;
+    border-radius: 7px;
+    background-color: #111;
+    height: 544px;
+    margin: 44px 0;
 }
 .play-svg-icon{
     height: 60px;
