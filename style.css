@@ -69,25 +69,52 @@ height: 30px;
     display: flex;
     margin-top: 30px;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-    gap: 20px;
-    height: 100%;
+    height: 95%;
+    padding: 10 0px;
+    width: 420px;
+    /* border: 2px solid red; */
 }
-
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70%;
-    width: 100%;
-    /* border: 3px solid greenyellow; */
+.your-library-song-container *{
+    /* border: 2px solid red; */
+    /* margin: 5px; */
 }
-
+.your-library-song-container ul{
+    padding: 0 40px;
+    /* margin: 10px; */
+}
+.play-now{
+display: flex;
+align-items: center;
+justify-content: start;
+/* border: 2px solid red; */
+width: 130px;
+}
+.play-now span{
+    font-size: 10px;
+    width: 45px;
+    /* border: 2px solid red; */
+}
+.your-library-song-container ul li{
+list-style-type: decimal;
+font-size: 12px;
+display: flex;
+gap: 14px;
+cursor: pointer;
+padding: 10px 0;
+align-items: center;
+border: 1px solid white;
+/* gap: 20px; */
+margin: 25px 0;
+border-radius:5px ;
+}
+.playlist-song-play-btn{
+    height: 25px;
+}
 .main-container{
      width: 100%;
     height:50%;
-    background-color: #000000;
+    margin-left: 60px;
+    background-color:#121212;
     border-radius: 15px;
     padding: 10px;
 }
