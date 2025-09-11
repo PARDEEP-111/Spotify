@@ -112,7 +112,9 @@ border-radius:5px ;
 }
 .main-container{
      width: 90%;
-    height:50%;
+    height:48%;
+    margin-top: 25px;
+    overflow: auto;
     margin-left: 60px;
     background-color:#121212;
     border-radius: 15px;
@@ -282,14 +284,14 @@ main{
     position: relative;
 }
 .play-bar{
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     bottom: 0;
     right: 0;
     z-index: 10;
-    width: 40%;
+    width: 35%;
     border: 2px solid red;
     background-color: #1a1a1a;
     /* gap: 12px; */
