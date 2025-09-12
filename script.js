@@ -32,15 +32,9 @@ return songs;
                         <div class="play-now">
                             <span> Play now</span>
                             <img class="playlist-song-play-btn" src="assets/play_circle_40dp_D9D9D9_FILL0_wght400_GRAD0_opsz40.png" alt="">
-                        </div>
-                        
+                        </div>              
      </li>`
    }
-  let audio = new Audio(song[0])
-  audio.play();
-  audio.addEventListener("loadeddata", ()=>{
-    let duration = audio.duration;
-    console.log(audio.duration,audio.currentSrc,audio.currentTime)
-  })
+  
  }
  getSongs()  

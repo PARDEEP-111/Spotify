@@ -1,19 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-body{
+
+body {
     display: grid;
     /* background-color: black; */
-    grid-template-columns: 25vw 75vw;
-    grid-template-rows:64px 91.8vh ;
+    grid-template-columns: 30vw 70vw;
+    grid-template-rows: 64px 91.8vh;
     color: white;
     background-color: black;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,49 +25,60 @@ header{
     background-color: rgb(0, 0, 0);
     color: white;
     /* border:2px solid  ; */
-   
+
 }
-aside{
+
+.info {
+    width: 200px;
+}
+
+aside {
     grid-row: 2/3;
     grid-column: 1/2;
     height: 91.8vh;
     width: 25vw;
     /* border: 2px solid blue; */
 }
-main{
+
+main {
     grid-row: 2/3;
     grid-column: 2/3;
-    width: 75vw;
+    width: 70vw;
     height: 91.8vh;
     /* border: 2px solid yellow; */
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.left{
+
+.left {
     display: flex;
-/* border: 2px solid red; */
-height: 30px;
-color: white;
+    /* border: 2px solid red; */
+    height: 30px;
+    color: white;
 }
-.right{
+
+.right {
     display: flex;
-/* border: 2px solid rgb(54, 141, 90); */
-height: 30px;
+    /* border: 2px solid rgb(54, 141, 90); */
+    height: 30px;
 }
-.your-library-sub-container{
+
+.your-library-sub-container {
     display: flex;
     justify-content: space-between;
-    
+
 }
-.add-btn{
+
+.add-btn {
     border: none;
     background-color: black;
     color: #929292;
     font-size: 29px;
     padding-right: 20px;
 }
-.your-library-main-container{
+
+.your-library-main-container {
     display: flex;
     margin-top: 30px;
     flex-direction: column;
@@ -75,65 +88,78 @@ height: 30px;
     /* border: 2px solid red; */
 }
 
-.your-library-song-container ul{
+.your-library-song-container ul {
     padding: 0 40px;
     /* margin: 10px; */
 }
-.play-now{
-display: flex;
-align-items: center;
-justify-content: start;
-/* border: 2px solid red; */
-width: 130px;
+
+.play-now {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /* border: 2px solid red; */
+    width: 130px;
 }
-.play-now span{
+
+.play-now span {
     font-size: 10px;
     width: 45px;
     /* border: 2px solid red; */
 }
-.your-library-song-container ul li{
-list-style-type: decimal;
-font-size: 12px;
-display: flex;
-gap: 14px;
-cursor: pointer;
-padding: 10px 0;
-align-items: center;
-border: 1px solid white;
-/* gap: 20px; */
-margin: 25px 0;
-border-radius:5px ;
+
+
+
+.your-library-song-container ul li {
+    list-style-type: decimal;
+    font-size: 12px;
+    display: flex;
+
+    gap: 14px;
+    cursor: pointer;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    /* gap: 20px; */
+    margin: 25px 0;
+    border-radius: 5px;
 }
-.playlist-song-play-btn{
+
+.playlist-song-play-btn {
     height: 25px;
 }
-.main-container{
-     width: 90%;
-    height:48%;
+
+.main-container {
+    width: 90%;
+    height: 48%;
     margin-top: 25px;
     overflow: auto;
     margin-left: 60px;
-    background-color:#121212;
+    background-color: #121212;
     border-radius: 15px;
     padding: 10px;
 }
-.icon{
+
+.icon {
     border-radius: 100%;
     /* background-color: blue; */
     width: 40px;
     cursor: pointer;
 
 }
-.music-icon{
+
+.music-icon {
     height: 30px;
     width: 70px;
     object-fit: contain;
 }
-.info{
-   
+
+.info {
+
     font-size: 12px;
 }
-#search-box{
+
+#search-box {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -142,60 +168,66 @@ border-radius:5px ;
     border-radius: 50px;
     background-color: #121212;
 }
-#search-box:hover{
+
+#search-box:hover {
     border: 1px solid lightgray;
     background-color: #444444;
 }
-.search-bar:hover{
+
+.search-bar:hover {
     background-color: #444444;
 }
-.search-bar{
+
+.search-bar {
     width: 27vw;
     height: 32px;
     background-color: black;
     border: none;
     font-size: large;
 }
-.right{
+
+.right {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px;
     padding: 10px;
 }
-.install-icon{
+
+.install-icon {
     height: 18px;
 }
 
-.support-item{
+.support-item {
     text-decoration: none;
     color: #929292;
     font-size: 14px;
     padding: 5px;
-   
+
 }
 
-.login-box{
+.login-box {
     display: flex;
     padding-left: 15px;
     justify-content: center;
     align-items: center;
-   
+
 }
 
-.log-in{
+.log-in {
     display: flex;
     font-size: 16px;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
     color: rgb(0, 0, 0);
-    font-weight:bolder;
+    font-weight: bolder;
     background-color: white;
     width: 100px;
     height: 45px;
 }
-.playlist-card-container{
+
+.playlist-card-container {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
@@ -203,16 +235,18 @@ border-radius:5px ;
     max-height: 60vh;
     overflow-y: scroll;
 }
-.playlist-card{
+
+.playlist-card {
     height: 269.5px;
     width: 195.5px;
-    background-color:#0d0d0d;
+    background-color: #0d0d0d;
     position: relative;
     border-radius: 10px;
     border: 1px solid rgb(71, 71, 71);
 
 }
-.your-library-song-container{
+
+.your-library-song-container {
     /* border: 2px solid red; */
     overflow: auto;
     border-radius: 7px;
@@ -220,7 +254,8 @@ border-radius:5px ;
     height: 544px;
     margin: 44px 0;
 }
-.play-svg-icon{
+
+.play-svg-icon {
     height: 60px;
     position: absolute;
     right: 0px;
@@ -228,78 +263,119 @@ border-radius:5px ;
     opacity: 0;
     transition: all 99ms ease-in-out;
 }
-.play-svg-icon:hover{
+
+.play-svg-icon:hover {
     opacity: 1;
 }
-.playlist-card img{
+
+.playlist-card img {
     width: 100%;
     object-fit: contain;
 }
 
-.playlist-heading{
+.playlist-heading {
     font-size: 16px;
     padding: 5px;
 }
-.playlist-paragraph{
+
+.playlist-paragraph {
     font-size: 14px;
     color: #929292;
     padding: 5px;
 }
+
 /* Smooth scrolling for the page */
 html {
-  scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
-  width: 12px;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0d0d0d; /* track color */
+    background: #0d0d0d;
+    /* track color */
 }
 
 ::-webkit-scrollbar-thumb {
 
-  background-color: #333;     /* thumb color */
-  border-radius: 6px;         /* rounded edges */
-  border: 3px solid #0d0d0d;  /* space around thumb */
-  transition: background-color 0.7s ease, border 0.5s ease; /* smooth hover */
+    background-color: #333;
+    /* thumb color */
+    border-radius: 6px;
+    /* rounded edges */
+    border: 3px solid #0d0d0d;
+    /* space around thumb */
+    transition: background-color 0.7s ease, border 0.5s ease;
+    /* smooth hover */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;     /* hover effect */
-  border: 3px solid #111;
+    background-color: #555;
+    /* hover effect */
+    border: 3px solid #111;
 
 }
 
 /* Firefox */
 * {
-  scrollbar-width: thin;             /* makes scrollbar slimmer */
-  scrollbar-color: #333 #0d0d0d;     /* thumb | track */
-  scroll-behavior: smooth;
+    scrollbar-width: thin;
+    /* makes scrollbar slimmer */
+    scrollbar-color: #333 #0d0d0d;
+    /* thumb | track */
+    scroll-behavior: smooth;
 }
-main{
+
+main {
     position: relative;
 }
-.play-bar{
+
+.circle {
+    height: 12px;
+    width: 12px;
+    border-radius: 100px;
+    color: white;
+    background-color: rgb(77, 77, 77);
+    cursor: grabbing;
+    position: absolute;
+    bottom: 35px;
+    left: 9.5%;
+    transition: all 1s ease-in-out;
+}
+
+.play-bar {
     position: fixed;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: end;
     align-items: center;
+    gap: 10px;
     bottom: 0;
     right: 0;
     z-index: 10;
     width: 35%;
+    height: 70px;
     border: 2px solid red;
     background-color: #1a1a1a;
     /* gap: 12px; */
 }
-.play-bar img{
+
+.play-bar img {
     cursor: pointer;
     /* border: 2px solid blue; */
-    
+
 }
-.song-forward-btn{
+
+.song-forward-btn {
     margin-left: 4px;
+}
+.seek-bar {
+    height: 5px;
+    background-color:  white;
+    border-radius: 50px;
+    width: 80%;
+}
+.song-icon{
+    height: 25px;
 }
