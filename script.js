@@ -1,4 +1,6 @@
 console.log("Lets write some js!!")
+
+let currentSong= new Audio();
   async function main(params) {
   let a= await fetch("http://127.0.0.1:5500/songs/")  
   let response = await a.text();
@@ -17,7 +19,14 @@ console.log("Lets write some js!!")
 return songs;
     
  }
+ const PlayMusic= (track)=>{
+  currentSong.src="/songs/" + track;
+// let audio  = new Audio()
+play.src="assets/pause_circle_40dp_EFEFEF_FILL0_wght400_GRAD0_opsz40.png"
+currentSong.play()
+ }
  async function getSongs(params) {
+  
   let song = await main()
   console.log(song);
    let songul =document.querySelector(".your-library-song-container").getElementsByTagName("ul")[0]
@@ -35,6 +44,23 @@ return songs;
                         </div>              
      </li>`
    }
-  
+  Array.from(document.querySelector(".your-library-song-container").getElementsByTagName("li")).forEach(e=>{
+    e.addEventListener("click", element=>{
+      console.log(e.querySelector(".info").firstElementChild.innerHTML);
+      PlayMusic(e.querySelector(".info").firstElementChild.innerHTML)
+
+    })
+    play.addEventListener("click", ()=>{
+if(currentSong.paused){
+currentSong.play()
+play.src="assets/pause_circle_40dp_EFEFEF_FILL0_wght400_GRAD0_opsz40.png"
+}
+else{
+  currentSong.pause()
+  play.src="assets/play_circle_40dp_D9D9D9_FILL0_wght400_GRAD0_opsz40.png"
+}
+    })
+
+  })
  }
  getSongs()  
