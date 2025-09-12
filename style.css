@@ -355,8 +355,8 @@ main {
     right: 0;
     z-index: 10;
     width: 35%;
-    height: 70px;
-    border: 2px solid red;
+    height: 170px;
+    /* border: 2px solid red; */
     background-color: #1a1a1a;
     /* gap: 12px; */
 }
@@ -379,4 +379,15 @@ main {
 .song-icon{
     height: 25px;
    
+}
+.song-info{
+    color: white;
+    /* border: 2px solid red; */
+}
+.song-info-time-container{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
 }

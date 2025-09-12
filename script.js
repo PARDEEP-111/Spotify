@@ -24,6 +24,8 @@ return songs;
 // let audio  = new Audio()
 play.src="assets/pause_circle_40dp_EFEFEF_FILL0_wght400_GRAD0_opsz40.png"
 currentSong.play()
+document.querySelector(".song-info").innerHTML = track
+document.querySelector(".song-time").innerHTML = "00:00 / 00:00"
  }
  async function getSongs(params) {
   
