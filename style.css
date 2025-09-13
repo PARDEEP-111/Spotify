@@ -48,7 +48,7 @@ main {
     /* border: 2px solid yellow; */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    /* gap: 20px; */
 }
 
 .left {
@@ -128,10 +128,13 @@ main {
 .playlist-song-play-btn {
     height: 25px;
 }
-
+main{
+    /* border: 2px solid red; */
+}
 .main-container {
     width: 90%;
     height: 48%;
+    /* border: 2px solid red; */
     margin-top: 25px;
     overflow: auto;
     margin-left: 60px;
@@ -317,7 +320,10 @@ html {
     border: 3px solid #111;
 
 }
+.seek-bar{
+    cursor: pointer;
 
+}
 /* Firefox */
 * {
     scrollbar-width: thin;
@@ -340,8 +346,8 @@ main {
     cursor: grabbing;
     position: absolute;
     bottom: 35px;
-    left: 9.5%;
-    transition: all 1s ease-in-out;
+    left: 0%;
+    transition: left 1ms ;
 }
 
 .play-bar {
@@ -354,16 +360,17 @@ main {
     bottom: 0;
     right: 0;
     z-index: 10;
-    width: 35%;
-    height: 170px;
-    /* border: 2px solid red; */
-    background-color: #1a1a1a;
-    /* gap: 12px; */
+    width: 72%;
+    height: 110px;
+    /* border-radius: 10px; */
+    margin: 10px;
+    border-top: 1px solid white;
+    /* background-color: #1a1a1a; */
+    
 }
 
 .play-bar img {
     cursor: pointer;
-    /* border: 2px solid blue; */
 
 }
 
@@ -374,7 +381,9 @@ main {
     height: 5px;
     background-color:  white;
     border-radius: 50px;
-    width: 80%;
+    width: 73vw;
+    
+    /* margin: 10px; */
 }
 .song-icon{
     height: 25px;

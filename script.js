@@ -31,17 +31,21 @@ function secondsToMinutesSconds(seconds){
 return songs;
     
  }
- const PlayMusic= (track)=>{
+ const PlayMusic= (track , pause= false)=>{
   currentSong.src="/songs/" + track;
-// let audio  = new Audio()
+  if(!pause){
+    currentSong.play()
 play.src="assets/pause_circle_40dp_EFEFEF_FILL0_wght400_GRAD0_opsz40.png"
-currentSong.play()
-document.querySelector(".song-info").innerHTML = track
+  }
+// let audio  = new Audio()
+// play.src="assets/pause_circle_40dp_EFEFEF_FILL0_wght400_GRAD0_opsz40.png"
+document.querySelector(".song-info").innerHTML =decodeURI(track) 
 document.querySelector(".song-time").innerHTML = "00:00 / 00:00"
  }
  async function getSongs(params) {
   
   let song = await main()
+  PlayMusic(song[0],true)
   console.log(song);
    let songul =document.querySelector(".your-library-song-container").getElementsByTagName("ul")[0]
    for (const songs of song) {
@@ -78,9 +82,16 @@ else{
   })
   currentSong.addEventListener("timeupdate", ()=>{
     console.log(currentSong.currentTime,currentSong.duration)
-    document.querySelector(".song-time").innerHTML = `${secondsToMinutesSconds(currentSong.currentTime)} : ${
+    document.querySelector(".song-time").innerHTML = `${secondsToMinutesSconds(currentSong.currentTime)} / ${
       secondsToMinutesSconds(currentSong.duration)
     }`
+    document.querySelector(".circle").style.left=(currentSong.currentTime/currentSong.duration) *100 + "%"
+  })
+
+  document.querySelector(".seek-bar").addEventListener("click", e=>{
+    let persent = (e.offsetX/e.target.getBoundingClientRect().width) *100
+    document.querySelector(".circle").style.left= (persent) * 100 +"%"
+    currentSong.currentTime = ((currentSong.duration)* persent ) / 100
   })
  }
  getSongs()  
