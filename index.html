@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <script src="script.js"></script>
     <link rel="shortcut icon" href="assets/error-page-logo.24aca703.svg" type="image/x-icon">
     <title>Spotify</title>
@@ -12,27 +13,22 @@
 
 <body>
     <header>
+        <div class="hamberger-container">
+            <img class="hamberger-icon" src="assets/menu_40dp_EFEFEF_FILL0_wght400_GRAD0_opsz40.png" alt="">
+        </div>
         <div class="left">
-            <a href="#"><img class="logo icon " src="assets/logo.svg" alt=""></a>
+            <a href="#"><img class="logo icon " src="assets/error-page-logo.24aca703.svg" alt=""></a>
             <a href="#"><img class="home icon " src="assets/home_40dp_5F6368_FILL0_wght400_GRAD0_opsz40.png"
                     alt=""></a>
-            <div id="search-box">
+            
                 <a href="#"><img class="search icon" src="assets/search_40dp_5F6368_FILL0_wght400_GRAD0_opsz40.png"
                         alt=""></a>
-                <input class="search-bar" placeholder="What do you want to play?" type="search">
-            </div>
-
+                <!-- <input class="search-bar" placeholder="What do you want to play?" type="search"> -->
+            
         </div>
         <div class="right">
-            <div class="support-box">
-                <a class="premium support-item" href="#">Premium</a>
-                <a class=" support support-item" href="#">Support</a>
-                <a class=" download support-item" href="#">Download</a>
-            </div>
             <div class="login-box">
-                <a class="support-item Install-app" href="#"><img class="install-icon"
-                        src="assets/download_for_offline_40dp_5F6368_FILL0_wght400_GRAD0_opsz40.png" alt="">Install
-                    app</a>
+                <a class="support-item Install-app" href="#"><img class="install-icon" src="assets/download_for_offline_40dp_5F6368_FILL0_wght400_GRAD0_opsz40.png" alt="">Install app</a>
                 <a class="support-item Sign-up " href="#">Sign up</a>
                 <a class="support-item log-in" href="#">Log in</a>
             </div>
@@ -51,6 +47,8 @@
           </div>
         </div>
     </aside>
+
+
     <main>
         <div class="albums-container  main-container ">
             <h2>Spotify playlist</h2>
@@ -73,7 +71,7 @@
                      
                 </div>
             </div>
-        </div>
+        
         <div class="play-bar">
             <div class="song-info-time-container">
 
