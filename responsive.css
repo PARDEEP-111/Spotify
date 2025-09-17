@@ -1,41 +1,42 @@
 @media (max-width : 1300px) {
  .hamberger-icon{
     display: block;
+    z-index: 1122;
+   
  }
- .left{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border:2px solid red; */
+main{
+    grid-column: 1/3;
+}
+.your-library-song-container{
+    height: auto;
+}
+.your-library-song-container ul{
+    /* border: 2px solid blue; */
+    height: 450px;
+    overflow-y: auto;
+}
+.close-btn{
+    display: block;
+}
+aside{
     position: relative;
-    height: 50px;
-    right: 420px;
- }
-    aside{
-        grid-column:0/0 ;
-        border: 2px solid red;
-        position: absolute;
-        left: -1020%;
-        transition: all 2s ease-in-out;
-        z-index: 10;
+    z-index: 200;
+    width: 400px;
+    height: 82vh;
+    
+    background-color: black;
+       left: -200%;
+       /* border: 2px solid red; */
     }
-    main{
-        grid-column: auto;
-    }
-.main-container {
-height: 55%;
-width: 80vw;
+.play-bar{
+    z-index: 4423233;
+    right: 30px;
+    background-color: black;
+    /* width: 100%; */
+    /* border: 2px solid red; */
+}
 }
 
-.playlist-card-container {
-/* border: 2px solid red; */
-overflow-y: auto;
-}
-    .play-bar{
-        margin-left: 1%;
-        width: 98%;
-        justify-content: center;
-        align-items: center;
-        bottom: 50px;
-    }
-}
+
+
+

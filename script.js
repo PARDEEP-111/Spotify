@@ -91,5 +91,12 @@ async function getSongs(params) {
     document.querySelector(".circle").style.left = (persent) * 100 + "%"
     currentSong.currentTime = ((currentSong.duration) * persent) / 100
   })
+  document.querySelector(".hamberger-icon").addEventListener("click", ()=>{
+    document.querySelector(".left-responsive").style.left ="0"
+  })
+    document.querySelector(".close-btn").addEventListener("click", ()=>{
+    document.querySelector(".left-responsive").style.left ="-350%"
+  })
+  
 }
 getSongs()  
