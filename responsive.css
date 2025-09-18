@@ -10,6 +10,11 @@ main{
 .your-library-song-container{
     height: auto;
 }
+.seek-bar{
+   
+   width: 97vw;
+    margin-left: 1%;
+}
 .your-library-song-container ul{
     /* border: 2px solid blue; */
     height: 450px;
@@ -33,9 +38,11 @@ aside{
 .play-bar{
     z-index: 4423233;
     right: 30px;
-   
-    /* width: 100%; */
-    /* border: 2px solid red; */
+    bottom: 20px;
+ overflow: auto;
+   /* overflow-x: hidden;  */
+    width: 90%;
+    border: 2px solid red;
 }
 main{
     /* margin-right: 10%; */
