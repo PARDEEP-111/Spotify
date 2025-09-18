@@ -23,6 +23,8 @@ aside{
     z-index: 200;
     width: 400px;
     height: 82vh;
+    transition: all 1s ease-in-out;
+    transition-delay: none;
     
     background-color: black;
        left: -200%;
@@ -31,9 +33,15 @@ aside{
 .play-bar{
     z-index: 4423233;
     right: 30px;
-    background-color: black;
+   
     /* width: 100%; */
     /* border: 2px solid red; */
+}
+main{
+    /* margin-right: 10%; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 }
 

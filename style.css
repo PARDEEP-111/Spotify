@@ -354,8 +354,8 @@ main {
     background-color: rgb(77, 77, 77);
     cursor: grabbing;
     position: absolute;
-    bottom: 34px;
-    /* left: -2%; */
+    bottom: 45px;
+    left: 0%;
     transition: left .41s ease-in ;
 }
 
@@ -366,6 +366,12 @@ main {
     justify-content: center;
     align-items: center;
     bottom: 0;
+    background-color: rgb(46, 53, 45);
+     border-radius: 5px;
+     height:95px;
+     width: 53%;
+     /* min-width: 35%; */
+    
    
 }
 
@@ -382,7 +388,7 @@ main {
     height: 5px;
     background-color:  white;
     border-radius: 50px;
-    width: 100%;
+    width: 88%;
 }
 .song-icon{
     height: 23px;
