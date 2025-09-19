@@ -92,7 +92,7 @@ async function getSongs(params) {
     currentSong.currentTime = ((currentSong.duration) * persent) / 100
   })
   document.querySelector(".hamberger-icon").addEventListener("click", ()=>{
-    document.querySelector(".left-responsive").style.left ="0"
+    document.querySelector(".left-responsive").style.left ="0px"
   })
     document.querySelector(".close-btn").addEventListener("click", ()=>{
     document.querySelector(".left-responsive").style.left ="-350%"

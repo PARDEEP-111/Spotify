@@ -29,16 +29,18 @@ header {
     /* border:2px solid  ; */
 
 }
-.hamberger-icon{
+
+.hamberger-icon {
     height: 30px;
     margin-left: 4px;
     display: none;
 }
+
 .info {
     width: 200px;
 }
 
-aside{
+aside {
     grid-row: 2/3;
     grid-column: 1/2;
     height: 70vh;
@@ -46,11 +48,13 @@ aside{
     margin-top: 30px;
     /* border: 2px solid blue; */
 }
-.close-btn{
+
+.close-btn {
     height: 20px;
     cursor: pointer;
     display: none;
 }
+
 main {
     grid-row: 2/3;
     grid-column: 2/3;
@@ -66,7 +70,8 @@ main {
     height: 30px;
     color: white;
 }
-.left *{
+
+.left * {
     margin-left: 4px;
 }
 
@@ -84,14 +89,14 @@ main {
     padding-right: 20px;
 }
 
-.your-library-main-container { 
+.your-library-main-container {
     display: flex;
     margin-top: 30px;
     flex-direction: column;
     /* height: 95%; */
     width: 90%;
-    border: 2px solid red;
- } 
+    /* border: 2px solid red; */
+}
 
 .your-library-song-container ul {
     padding: 0 40px;
@@ -133,6 +138,7 @@ main {
 .playlist-song-play-btn {
     height: 25px;
 }
+
 .main-container {
     /* width: 80vw; */
     height: 60vh;
@@ -203,10 +209,12 @@ main {
     /* margin-top: -5px; */
     padding: 1px;
 }
-.Install-app{
+
+.Install-app {
     display: flex;
     align-items: center;
 }
+
 .support-item {
     text-decoration: none;
     color: #929292;
@@ -220,7 +228,7 @@ main {
     display: flex;
     padding-left: 15px;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 
 }
 
@@ -329,10 +337,12 @@ html {
     border: 3px solid #111;
 
 }
-.seek-bar{
+
+.seek-bar {
     cursor: pointer;
 
 }
+
 /* Firefox */
 * {
     scrollbar-width: thin;
@@ -346,33 +356,90 @@ main {
     position: relative;
 }
 
-.circle {
-    height: 12px;
-    width: 12px;
-    border-radius: 100px;
-    color: white;
-    background-color: rgb(77, 77, 77);
-    cursor: grabbing;
-    position: absolute;
-    bottom: 45px;
-    left: 0%;
-    transition: left .41s ease-in ;
+.seek-bar {
+    height: 4px;
+    width: 100%;
+    margin: 12px;
+    background-color: white;
 }
 
 .play-bar {
- 
+
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    cursor: grabbing;
+    position: absolute;
+    left: 0%;
+    transition: left .41s ease-in;
+    position: absolute;
+    top: 39%;
+    /* transform: translate(-50%, -50%); */
+    /* centers horizontally & vertically */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #635c5c;
+}
+
+/* .seek-bar {
+    position: relative;   🔑 this makes it the reference for .circle
+    margin: 10px;
+    height: 4px;
+    background-color: white;
+    border-radius: 50px;
+    width: 90%;
+    margin-left: 30px;
+}
+
+.circle {
+    /* position: absolute;
+    top: 50%; 
+    left: 0%; 
+    transform: translate(-50%, -50%); /* keep it centered */
+/* width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #635c5c;
+    cursor: grabbing; */
+}
+
+/* .circle {
+  position: absolute;
+  top: 46%;
+  left: 0%;
+  /* transform: translateX(-50%) translateY(-50%); only horizontal correction */
+/* width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translateY(-50%); 
+  background: #635c5c; */
+/* } */
+
+
+
+
+.play-bar {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
-     border-radius: 5px;
-     height:95px;
-     width: 99%;
-     min-width: 35%;
-     z-index: 43934823749832;
-    
-   
+    border-radius: 5px;
+    height: 95px;
+    width: 89%;
+    border: 2px solid red;
+    /* min-width: 35%; */
+    z-index: 439332;
+
+
 }
 
 .play-bar img {
@@ -383,32 +450,38 @@ main {
 .song-forward-btn {
     margin-left: 4px;
 }
-.seek-bar {
+
+/* .seek-bar {
     margin: 10px;
     height: 5px;
     background-color:  white;
     border-radius: 50px;
     width: 100%;
     margin-left: 30px;
-}
-   .play-bar-con{
-    border: 2px solid red;
+} */
+.play-bar-con {
+    /* border: 2px solid red; */
+    z-index: 4444;
     background-color: black;
     border-radius: 5px;
     width: 60vw;
+    /* height: 99px; */
     position: fixed;
     bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-   }
-.song-icon{
+}
+
+.song-icon {
     height: 23px;
 }
-.song-info{
+
+.song-info {
     color: white;
 }
-.song-info-time-container{
+
+.song-info-time-container {
     display: flex;
     gap: 10px;
     justify-content: center;

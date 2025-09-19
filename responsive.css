@@ -1,62 +1,93 @@
-@media (max-width : 1300px) {
- .hamberger-icon{
+@media (max-width: 1300px) {
+  /* Hide horizontal scroll issues */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Show hamburger + close icons */
+  .hamberger-icon {
     display: block;
+    cursor: pointer;
     z-index: 1122;
-   
- }
-main{
-    grid-column: 1/3;
-}
-.your-library-song-container{
-    height: auto;
+  }
+
+  .close-btn {
+    display: block;
+    cursor: pointer;
+    z-index: 1123;
+  }
+
+  /* Sidebar (hidden offscreen, slides in on .active) */
+  aside {
+    position: fixed;
+    top: 0;
+    left: -500%; /* pushed way offscreen */
+    width: 400px;
+    height: 100vh;
+    background-color: black;
+    z-index: 2000;
+    transition: left 0.4s ease-in-out;
+    overflow-y: auto;
+  }
+
+  aside.active {
+    left: 0;
+  }
+
+  /* Main should stretch full width */
+  main {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 10px;
+  }
+.circle{
+    top:50%;
 }
 .seek-bar{
-   
-   width: 97vw;
-    margin-left: 1%;
-}
-.your-library-song-container ul{
-    /* border: 2px solid blue; */
-    height: 450px;
-    overflow-y: auto;
-}
-.close-btn{
-    display: block;
-}
-aside{
-    position: relative;
-    z-index: 200;
-    width: 400px;
-    height: 82vh;
-    transition: all 1s ease-in-out;
-    transition-delay: none;
-    
-    background-color: black;
-       left: -200%;
-       /* border: 2px solid red; */
-    }
-    .play-bar-con{
-        width: 100vw;
-        z-index: 3334;
-    }
-.play-bar{
-    z-index: 4423233;
-    right: 30px;
-    bottom: 20px;
-    background-color: transparent;
- /* overflow: auto; */
-   /* overflow-x: hidden;  */
-    width: 90%;
     /* border: 2px solid red; */
 }
-main{
-    /* margin-right: 10%; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+  /* Play bar container fixed bottom */
+  /* .play-bar-con {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 3000;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  /* Play bar itself */
+  /* .play-bar {
+    width: 90%;
+    max-width: 600px;
+    background: black;
+    padding: 10px;
+    border-radius: 8px;
+  } */
+
+  /* Fix seek bar inside play bar */
+  /* .seek-bar {
+    position: relative;
+    height: 5px;
+    background-color: white;
+    border-radius: 50px;
+    width: 100%;
+    margin: 10px 0;
+  } */
+
+  /* .circle {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #635c5c;
+    cursor: pointer;
+  } */ 
 }
-}
-
-
-
-
