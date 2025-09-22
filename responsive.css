@@ -67,20 +67,25 @@ header *{
 }
 
 .main-container {
-  width: 55vw;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   display: flex;
+  border: 2px solid red;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
  
 }
 .playlist-card-container{
-  /* border: 2px solid yellow; */
-  margin-left: 20px;
-  width: 100vw;
+  border: 2px solid yellow;
+  margin-left: 220px;
+  width: 100%;
+  justify-content: start;
+  align-items: start;
 }
 .playlist-card{
-  width: 650px;
+  width: 350px;
   height: 470px;
   margin: 10px;
 
