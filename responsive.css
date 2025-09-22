@@ -1,13 +1,17 @@
 @media (max-width: 1300px) {
   /* Hide horizontal scroll issues */
-  
+  html{
+    overflow: hidden;
+  }
   body {
-    /* overflow-x: hidden; */
-    /* overflow-y: hidden; */
+    overflow-x: hidden;
+    overflow-y: hidden;
     grid-template-columns: 30vw 69vw;
     grid-template-rows: 64px 78vh 10vh 2vh;
   }
-
+header{
+  grid-column: 1/3;
+}
   /* Show hamburger + close icons */
   .hamberger-icon {
     display: block;
@@ -17,6 +21,8 @@
 .play-bar-con{
     grid-column: 1/3;
     grid-row: 3/4;
+    width: 100vw;
+    right: 0%;
 }
   .close-btn {
     display: block;
@@ -40,18 +46,43 @@
   aside.active {
     left: 0;
   }
-
-  /* Main should stretch full width */
+.seek-bar{
+  width: 98vw;
+}
+  
   main {
-    grid-column: 1 / -1;
-    width: 100%;
+    grid-column: 1 / 3;
     padding: 10px;
+    /* justify-content: stretch; */
   }
 .circle{
     top:50%;
 }
 .play-bar-con{
-bottom:10vh ;
+
 }
+header *{
+  font-size: 8px;
+  width: auto;
+}
+
+.main-container {
+  width: 55vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
  
+}
+.playlist-card-container{
+  /* border: 2px solid yellow; */
+  margin-left: 20px;
+  width: 100vw;
+}
+.playlist-card{
+  width: 650px;
+  height: 470px;
+  margin: 10px;
+
+}
 }
