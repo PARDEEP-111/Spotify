@@ -87,7 +87,7 @@ async function getSongs(params) {
   })
 
   document.querySelector(".seek-bar").addEventListener("click", e => {
-    let persent = (e.offsetX / e.target.getBoundingClientRect().width) * 100
+    let persent = (e.offsetX / e.target.getBoundingClientRect().width) *100
     document.querySelector(".circle").style.left = (persent) * 100 + "%"
     currentSong.currentTime = ((currentSong.duration) * persent) / 100
   })
