@@ -76,10 +76,11 @@ main {
     display: flex;
     height: 30px;
     color: white;
+    margin-left: 10px;
 }
 
 .left * {
-    margin-left: 4px;
+    margin: -3px 2px;
 }
 
 .your-library-sub-container {
