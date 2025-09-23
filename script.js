@@ -101,7 +101,7 @@ async function getSongs(params) {
   // previous btn 
   document.querySelector(".song-back-btn").addEventListener("click", () => {
     let index = song.indexOf(currentSong.src.split("/").slice(-1)[0])
-
+ currentSong.pause()
     if ((index - 1) >= 0) {
 
       PlayMusic(song[index - 1])
@@ -114,6 +114,7 @@ async function getSongs(params) {
   document.querySelector(".song-forward-btn").addEventListener("click", () => {
     console.log("next");
     let index = song.indexOf(currentSong.src.split("/").slice(-1)[0])
+    currentSong.pause()
     if ((index + 1) >= length) {
       PlayMusic(song[index + 1])
     }
