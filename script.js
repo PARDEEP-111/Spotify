@@ -1,9 +1,9 @@
 console.log("Lets write some js!!")
-
+let song
 let currentSong = new Audio();
 function secondsToMinutesSconds(seconds) {
   if (isNaN(seconds) || seconds < 0) {
-    return "invalid input";
+    return "00:00";
   }
   const minutes = Math.floor(seconds / 60);
   const remainingSeconds = Math.floor(seconds % 60);
@@ -44,7 +44,7 @@ const PlayMusic = (track, pause = false) => {
 }
 async function getSongs(params) {
 
-  let song = await main()
+  song = await main()
   PlayMusic(song[0], true)
   console.log(song);
   let songul = document.querySelector(".your-library-song-container").getElementsByTagName("ul")[0]
@@ -87,17 +87,37 @@ async function getSongs(params) {
   })
 
   document.querySelector(".seek-bar").addEventListener("click", e => {
-    let persent = (e.offsetX / e.target.getBoundingClientRect().width) *100
+    let persent = (e.offsetX / e.target.getBoundingClientRect().width) * 100
     document.querySelector(".circle").style.left = (persent) * 100 + "%"
     currentSong.currentTime = ((currentSong.duration) * persent) / 100
   })
-  document.querySelector(".hamberger-icon").addEventListener("click", ()=>{
-    document.querySelector(".left-responsive").style.left ="0px"
+  document.querySelector(".hamberger-icon").addEventListener("click", () => {
+    document.querySelector(".left-responsive").style.left = "0px"
   })
-    document.querySelector(".close-btn").addEventListener("click", ()=>{
-    document.querySelector(".left-responsive").style.left ="-350%"
+  document.querySelector(".close-btn").addEventListener("click", () => {
+    document.querySelector(".left-responsive").style.left = "-350%"
   })
-  document.querySelector(".song-back-btn").addEventListener("click", ()=>{
+
+  // previous btn 
+  document.querySelector(".song-back-btn").addEventListener("click", () => {
+    let index = song.indexOf(currentSong.src.split("/").slice(-1)[0])
+
+    if ((index - 1) >= 0) {
+
+      PlayMusic(song[index - 1])
+    }
+    console.log(index);
+
+  })
+
+  // song next btn
+  document.querySelector(".song-forward-btn").addEventListener("click", () => {
+    console.log("next");
+    let index = song.indexOf(currentSong.src.split("/").slice(-1)[0])
+    if ((index + 1) >= length) {
+      PlayMusic(song[index + 1])
+    }
+    console.log(index);
 
   })
 }
