@@ -40,7 +40,7 @@ header{
     left: -500%; /* pushed way offscreen */
     width: 400px;
     height: 100vh;
-    background-color: black;
+    background-color: rgb(26, 25, 25);
     z-index: 2000;
     transition: left 0.4s ease-in-out;
     overflow-y: auto;
@@ -76,20 +76,16 @@ header *{
   display: flex;
   /* border: 2px solid red; */
   justify-content: center;
-  /* align-items: flex-end; */
   flex-direction: column;
  
 }
 .playlist-card-container{
   /* border: 2px solid yellow; */
-  /* margin-left: 220px; */
-  width: 100%;
-  justify-content: start;
-  align-items: start;
+  width: 90vw;
 }
 .playlist-card{
-  width: 350px;
-  height: 470px;
+  width: 45%;
+  height: 47%;
   margin: 10px;
 
 }
@@ -103,18 +99,49 @@ header *{
     align-items: start;
   }
   .main-container {
-    width: 90vw;
-    height: 70vh;
+    width: 100vw;
+    /* height: 100vh; */
     display: flex;
+    /* border: 2px solid blue; */
+    position: relative;
+    width: 90vh;
+     /* top:-100px; */
+     justify-content: start;
     align-items: start;
   }
   .playlist-card-container{
     width: 90vw;
-    height: 70vh;
-    align-items: start;
+    /* height: 100vh; */
+    position: relative;
+    /* top: -100px; */
+    /* border: 2px solid red; */
+   overflow-y: auto;
+    align-items: stretch;
     justify-content: center;
   }
   .playlist-card{
-    height: 400px;
+    height: 49%;
+    width: 99%;
+    /* height: 440px; */
+    /* width: 500px; */
+  }
+  .play-bar-con{
+    background-color: black;
+    bottom: 0;
+    width: 100vw;
+    height: 18vh;
+  }
+  .seek-bar{
+    position: relative;
+    bottom: 0px;
+    width: 88vw;
+    background-color: white;
+    border: 2px solid rgb(255, 255, 255);
+  }
+  .circle{
+    top: -5px;
+  }
+  aside{
+width: 98vw;
   }
 }

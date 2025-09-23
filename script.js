@@ -97,6 +97,8 @@ async function getSongs(params) {
     document.querySelector(".close-btn").addEventListener("click", ()=>{
     document.querySelector(".left-responsive").style.left ="-350%"
   })
-  
+  document.querySelector(".song-back-btn").addEventListener("click", ()=>{
+
+  })
 }
 getSongs()  
