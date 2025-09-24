@@ -385,7 +385,7 @@ main {
 .circle {
     cursor: grabbing;
     position: absolute;
-    left: -12px;
+    left: 0px;
     transition: left .41ms ease-in;
     position: absolute;
     bottom: -4px;
@@ -410,7 +410,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  background-color: rgba(63, 92, 58, 0.74);
+  background-color: rgba(58, 78, 92, 0.74);
     border-radius: 5px;
     height: 95px;
     width: 89%;
@@ -466,4 +466,22 @@ main {
     justify-content: center;
     align-items: center;
 
+}
+.volume{
+    position: absolute;
+    right: 60px;
+    border-radius: 50px;
+    top: -60px;
+    width: 230px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:rgba(58, 78, 92, 0.74) ;
+    
+    
+}
+.volume *{
+
+    cursor: pointer;
 }

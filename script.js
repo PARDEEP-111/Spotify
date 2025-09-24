@@ -46,7 +46,6 @@ async function getSongs(params) {
 
   song = await main()
   PlayMusic(song[0], true)
-  console.log(song);
   let songul = document.querySelector(".your-library-song-container").getElementsByTagName("ul")[0]
   for (const songs of song) {
     songul.innerHTML = songul.innerHTML + `<li>
@@ -64,7 +63,6 @@ async function getSongs(params) {
   }
   Array.from(document.querySelector(".your-library-song-container").getElementsByTagName("li")).forEach(e => {
     e.addEventListener("click", element => {
-      console.log(e.querySelector(".info").firstElementChild.innerHTML);
       PlayMusic(e.querySelector(".info").firstElementChild.innerHTML)
 
     })
@@ -106,19 +104,22 @@ async function getSongs(params) {
 
       PlayMusic(song[index - 1])
     }
-    console.log(index);
 
   })
 
   // song next btn
   document.querySelector(".song-forward-btn").addEventListener("click", () => {
-    console.log("next");
     let index = song.indexOf(currentSong.src.split("/").slice(-1)[0])
     currentSong.pause()
-    if ((index + 1) >= length) {
+    if ((index + 1) < song.length) {
       PlayMusic(song[index + 1])
     }
-    console.log(index);
+
+
+  })
+  // add event to volume
+  document.querySelector(".rang").getElementsByTagName("input")[0].addEventListener("change",(e)=>{
+currentSong.volume = (e.target.value) /100
 
   })
 }
