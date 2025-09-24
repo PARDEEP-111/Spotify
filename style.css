@@ -5,7 +5,9 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-
+:root{
+    --a: 0;
+}
 body {
     display: grid;
     background-color: black;
@@ -261,10 +263,17 @@ main {
     gap: 10px;
     max-height: 200vh;
     overflow-y: scroll;
+    
+}
+.playlist-card:hover{
+    background-color: black;
+    transition: all 82ms;
+--a :1;
 }
 
 .playlist-card {
     height: 269.5px;
+    cursor: pointer;
     width: 195.5px;
     background-color: #2c2929;
     position: relative;
@@ -288,7 +297,7 @@ main {
     position: absolute;
     right: 0px;
     top: 50%;
-    opacity: 0;
+    opacity: var(--a);
     transition: all 99ms ease-in-out;
 }
 
