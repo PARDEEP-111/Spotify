@@ -1,5 +1,6 @@
 console.log("Lets write some js!!")
 let song
+let currentFolder
 let currentSong = new Audio();
 function secondsToMinutesSconds(seconds) {
   if (isNaN(seconds) || seconds < 0) {
@@ -13,8 +14,10 @@ function secondsToMinutesSconds(seconds) {
 
   return `${formattedMinutes}:${formattedSeconds}`;
 }
-async function main(params) {
-  let a = await fetch("http://127.0.0.1:5500/songs/")
+
+async function main(folder) {
+  currentFolder = folder;
+let a = await fetch(`http://127.0.0.1:5500/${folder}/`)
   let response = await a.text();
   // console.log(response);
   let div = document.createElement("div")
@@ -24,7 +27,7 @@ async function main(params) {
   for (let index = 0; index < as.length; index++) {
     const element = as[index];
     if (element.href.endsWith("mp3")) {
-      songs.push(element.href.split("/songs/")[1])
+      songs.push(element.href.split(`/${folder}/`)[1])
     }
 
   }
@@ -32,7 +35,7 @@ async function main(params) {
 
 }
 const PlayMusic = (track, pause = false) => {
-  currentSong.src = "/songs/" + track;
+  currentSong.src = `/${currentFolder}/` + track;
   if (!pause) {
     currentSong.play()
     play.src = "assets/pause_circle_40dp_EFEFEF_FILL0_wght400_GRAD0_opsz40.png"
@@ -44,7 +47,7 @@ const PlayMusic = (track, pause = false) => {
 }
 async function getSongs(params) {
 
-  song = await main()
+  song = await main("songs/ncs")
   PlayMusic(song[0], true)
   let songul = document.querySelector(".your-library-song-container").getElementsByTagName("ul")[0]
   for (const songs of song) {
@@ -121,6 +124,15 @@ async function getSongs(params) {
   document.querySelector(".rang").getElementsByTagName("input")[0].addEventListener("change",(e)=>{
 currentSong.volume = (e.target.value) /100
 
+  })
+  // load the playlist whenever the card is cliked
+   Array.from(document.getElementsByClassName("playlist-card")).forEach(e=>{
+e.addEventListener("click",async item=>{
+  console.log(e);
+  
+  song = await main( `songs/${song = await main("songs/ncs")}`)
+  item.dataset.folder
+})
   })
 }
 getSongs()  
