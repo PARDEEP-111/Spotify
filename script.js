@@ -128,10 +128,10 @@ currentSong.volume = (e.target.value) /100
   // load the playlist whenever the card is cliked
    Array.from(document.getElementsByClassName("playlist-card")).forEach(e=>{
 e.addEventListener("click",async item=>{
-  console.log(e);
   
-  song = await main( `songs/${song = await main("songs/ncs")}`)
-  item.dataset.folder
+  console.log(item.currentTarget.dataset.folder);
+  song = await main(`songs/${item.currentTarget.dataset.folder}`)
+ 
 })
   })
 }
