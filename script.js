@@ -169,11 +169,25 @@ async function getSongs() {
     currentSong.pause();
     if (index + 1 < song.length) PlayMusic(song[index + 1]);
   });
-
+ // add an event listen to volume
   document.querySelector(".rang input").addEventListener("change", e => {
     currentSong.volume = e.target.value / 100;
   });
-}
 
+  //  making mute and unmute btn
+  document.querySelector(".volume>img").addEventListener("click", e=>{
+    console.log(e.target);
+    if (e.target.src.includes("assets/volume.png") ){
+e.target.src= e.target.src.replace("assets/volume.png", "assets/NoVolume.png") 
+ currentSong.volume= 0
+ document.querySelector(".rang").getElementsByTagName("input")[0].value =0
+    }
+  else{
+    e.target.src= e.target.src.replace("assets/NoVolume.png", "assets/volume.png")
+     currentSong.volume= .20
+      document.querySelector(".rang").getElementsByTagName("input")[0].value =50
+  }
+  })
+}
 getSongs();
 
