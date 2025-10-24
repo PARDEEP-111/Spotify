@@ -1,5 +1,4 @@
 
-
 console.log("Let's write some JS!!");
 
 let song;
@@ -75,26 +74,61 @@ const PlayMusic = (track, pause = false) => {
 };
 
 async function displayAlbums() {
-  let a = await fetch(`http://127.0.0.1:5500/songs`)
+  let cardContainer = document.querySelector(".playlist-card-container");
+  let a = await fetch(`http://127.0.0.1:5500/songs`);
   let response = await a.text();
-  let div = document.createElement("div")
-  div.innerHTML = response
+  let div = document.createElement("div");
+  div.innerHTML = response;
   let anchors = div.getElementsByTagName("a");
-  let folders = []
-Array.from(anchors).forEach(e => {
-  if (e.href.includes("/songs")) {
-    console.log(e.href.split("/").slice(-1));
-  }
-});
 
-  
+  let array = Array.from(anchors);
+  for (let index = 0; index < array.length; index++) {
+    const e = array[index];
+
+    if (e.href.includes("/songs")) {
+      let folder = e.href.split("/").slice(-1)[0]; // ✅ FIXED
+
+      if (folder && folder !== "songs") {
+        try {
+          // ✅ Fetch folder metadata
+          let infoResponse = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
+          let info = await infoResponse.json();
+
+          // ✅ Add card dynamically
+          cardContainer.innerHTML += `
+            <div data-folder="${folder}" class="playlist-card">
+              <div class="play-svg">
+                <svg class="play-svg-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="77" viewBox="0 0 70 77">
+                  <circle cx="35" cy="38.5" r="30" fill="#1DB954"/>
+                  <polygon points="28,22 52,38.5 28,55" fill="black"/>
+                </svg>
+              </div>
+              <img class="playlist-img" src="songs/${folder}/cover.png" alt="cover">
+              <p class="playlist-heading">${info.title}</p>
+              <p class="playlist-paragraph">${info.description}</p>
+            </div>`;
+        } catch (err) {
+          console.warn(`❌ Missing or invalid info.json in ${folder}`);
+        }
+      }
+    }
+  }
+
+  // ✅ Add click listeners after cards are created
+  Array.from(document.getElementsByClassName("playlist-card")).forEach(e => {
+    e.addEventListener("click", async item => {
+      console.log(item.currentTarget.dataset.folder);
+      song = await main(`songs/${item.currentTarget.dataset.folder}`);
+    });
+  });
 }
+
 async function getSongs() {
   song = await main("songs/ncs");
   PlayMusic(song[0], true);
 
-  //     display all the albums
-    displayAlbums()
+  // ✅ Display all albums
+  displayAlbums();
 
   play.addEventListener("click", () => {
     if (currentSong.paused) {
@@ -139,13 +173,7 @@ async function getSongs() {
   document.querySelector(".rang input").addEventListener("change", e => {
     currentSong.volume = e.target.value / 100;
   });
-
-  Array.from(document.getElementsByClassName("playlist-card")).forEach(e => {
-    e.addEventListener("click", async item => {
-      console.log(item.currentTarget.dataset.folder);
-      song = await main(`songs/${item.currentTarget.dataset.folder}`);
-    });
-  });
 }
 
 getSongs();
+
