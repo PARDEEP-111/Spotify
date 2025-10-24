@@ -261,8 +261,9 @@ main {
     width: 62vw;
     margin-top: 20px;
     gap: 10px;
-    max-height: 200vh;
+    max-height: 80vh;
     overflow-y: scroll;
+    /* border:2px solid rgb(151, 0, 0) */
     
 }
 .playlist-card:hover{
