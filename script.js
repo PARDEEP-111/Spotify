@@ -63,7 +63,7 @@ async function main(folder) {
 }
 
 const PlayMusic = (track, pause = false) => {
-  currentSong.src = `/${currentFolder}/` + track;
+  currentSong.src = `songs/${currentFolder}/` + track;
   if (!pause) {
     currentSong.play();
     play.src = "assets/pause_circle_40dp_EFEFEF_FILL0_wght400_GRAD0_opsz40.png";
